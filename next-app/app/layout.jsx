@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { Inter } from 'next/font/google'
 import GoogleAnalytics from './components/GoogleAnalytics'
+import { Suspense } from 'react'
 import ogImage from '../public/images/tv-1024x636-1-1.webp'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -207,7 +208,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <GoogleAnalytics />
-        {children}
+        <Suspense fallback={<div />}>{children}</Suspense>
       </body>
     </html>
   )

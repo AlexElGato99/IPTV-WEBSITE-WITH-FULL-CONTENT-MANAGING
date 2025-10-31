@@ -3,10 +3,10 @@ require('dotenv').config();
 
 // Create connection pool for better performance
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'iptv_database',
+  host: 'localhost',
+  user: 'root',
+  password: '0708264907',
+  database: 'iptv_database',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,

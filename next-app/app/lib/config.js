@@ -1,9 +1,6 @@
 // Shared API base for frontend. Computes from current host to avoid localhost issues on other devices.
 export function getApiBase() {
-  if (typeof window !== 'undefined') {
-    return `${window.location.protocol}//${window.location.hostname}:5000`;
-  }
-  return process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5000';
+  return 'https://api.serv-iptv.com';
 }
 
 export function getApiUrl() {
